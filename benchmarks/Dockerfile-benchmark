@@ -1,0 +1,24 @@
+FROM node:boron
+# Create a user to run the benchmark
+RUN useradd -s /bin/bash -d /home/bench -m bench 
+
+# Set the working directory
+WORKDIR /home/bench/benchmarks
+
+# Copy the current directory contents into the container at working directory
+ADD . /home/bench/benchmarks
+
+# Set user permissions for the files
+RUN chown -R bench:bench /home/bench/benchmarks
+
+# Install nessacery moudules
+RUN npm install
+
+# Switch user to bench
+USER bench
+
+# Make port 9000 available to the world outside this container
+EXPOSE 9000
+
+# Start benchmark server
+CMD ["node", "benchmarks.js"]

@@ -1,0 +1,16 @@
+{
+  "name": "node-scalability-benchmarksuite-benchmarks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "benchmarks.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jiapeng Zhu",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "connect-multiparty": "^2.0.0",
+    "express": "^4.15.3",
+    "promise": "^8.0.1"
+  }
+}

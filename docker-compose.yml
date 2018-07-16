@@ -1,0 +1,30 @@
+version: "3"
+services:
+  ibench:
+    image: 192.168.1.42:5001/ibench
+    deploy:
+      replicas: 6
+      resources:
+        limits:
+            cpus: "1"
+            memory: 128M
+      placement:
+        constraints:
+          - node.hostname != worker1    
+          - node.hostname != worker6
+          - node.hostname != worker20
+          - node.hostname != manager
+      restart_policy:
+        condition: on-failure
+    ports: 
+      - "9001:9000"
+    environment:
+      - CPU_COUNT=0
+      - SERVER_PORT=9000
+      - NODE_SERVER_PORT=9001
+      - SERVER_IP=0.0.0.0
+      - PRIME=10971096049
+  
+networks:
+  webnet:
+    
