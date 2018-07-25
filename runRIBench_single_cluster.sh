@@ -1,6 +1,7 @@
 #/bin/bash
 
 # This script is to conduct experiment running on docker swarm
+# Chnage these parameters to meet your execution environment
 REMOTE_SERVER_DIR="/home/ubuntu/nodejs/benchmarks/"
 TEMPLET_DIR="./templets/"
 STACK_NAME="sbench"
@@ -19,7 +20,7 @@ S_URL=$RC_SERVER_IP"/startperf?flag=1"
 
 # Fire requests parameters
 duration=100
-jmeter_path="executor/apache-jmeter-3.2/bin/jmeter"
+jmeter_path="/homes/jzhu3/jmeter/apache-jmeter-3.2/bin/jmeter"
 jmeter_test_plan="configs/test_plan.jmx"
 jmeter_post_test_plan="configs/post_test_plan.jmx"
 jmeter_upload_file_path="images/two_kb_image.png"
