@@ -20,7 +20,7 @@ S_URL=$RC_SERVER_IP"/startperf?flag=1"
 
 # Fire requests parameters
 duration=100
-jmeter_path="/homes/jzhu3/jmeter/apache-jmeter-3.2/bin/jmeter"
+jmeter_path="PATH/TO/jmeter"
 jmeter_test_plan="configs/test_plan.jmx"
 jmeter_post_test_plan="configs/post_test_plan.jmx"
 jmeter_upload_file_path="images/two_kb_image.png"
