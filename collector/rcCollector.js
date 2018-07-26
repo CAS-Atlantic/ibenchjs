@@ -16,7 +16,7 @@ var list_container_cmd1 = 'docker ps -f status=running '
 	
 // remote command execution
 var remote_user = 'ubuntu'
-	, ubuntu_passd = 'bc87f4d84e446c1d1539fe2c'
+	, ubuntu_passd = '12345'
 	, mkdir_cmd1 = 'sudo mkdir -p /var/run/netns'
 	, ln_cmd1 = 'sudo ln -sf /proc/'
 	, ln_cmd2 = '/ns/net /var/run/netns/'

@@ -1,7 +1,7 @@
 version: "3"
 services:
   ibench:
-    image: 192.168.1.42:5001/ibench
+    image: 0.0.0.0:5000/ibench
     deploy:
       replicas: 1
       resources:

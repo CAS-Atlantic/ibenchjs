@@ -26,7 +26,9 @@ jmeter_test_plan="configs/test_plan.jmx"
 jmeter_post_test_plan="configs/post_test_plan.jmx"
 jmeter_upload_file_path="images/two_kb_image.png"
 RESULT_FILE="result_single.txt"
+# Specify the endpoint
 get_urls=( "/getmembound" "/getdiskbound" "/getcpubound" "/getnetinbound" "/getnetoutbound" )
+# Specify the node's hostname running the benchmark service 
 node_arr=( "worker3" "worker20" "worker6" "worker1" "worker20" )
 
 
